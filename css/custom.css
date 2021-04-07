@@ -1,0 +1,141 @@
+html,
+body {
+  height: 100%;
+}
+
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../img/hero-img-bright.jpg');
+  height: 75%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text-container {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text-container h1 {
+  font-size: 4rem !important;
+}
+
+.navbar {
+  z-index: 2;
+}
+
+.navbar a {
+  color: white !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  border-width: 2px;
+}
+
+[class*=' devicon-'],
+[class^='devicon-'] {
+  font-size: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hover-icon-container .fa,
+.hover-icon-container .fab,
+.hover-icon-container .fas {
+  color: white;
+  font-size: 2rem;
+}
+
+.fa,
+.fab,
+.fas {
+  font-size: 4rem;
+}
+
+.icon-img {
+  height: 64px;
+  width: 64px;
+}
+
+.hover-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hover-icon-container div {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -25px;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  background-color: #343a40;
+}
+
+.hover-icon-container a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.hover-icon-container a:hover {
+  text-decoration: none;
+}
+
+.section-title {
+  color: #2eb8b8;
+}
+
+.btn-blue {
+  color: #fff;
+  background-color: #2eb8b8;
+  border-color: #2eb8b8;
+}
+
+.bg-light-gray {
+  background-color: #eeeeee;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  .navbar a {
+    text-shadow: 2px 2px 4px #000000;
+  }
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.angled-y-down {
+  clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 calc(100% - 3vw));
+  -webkit-clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 calc(100% - 3vw));
+}
+
+.angled-y-down-reverse {
+  clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
+  -webkit-clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+.angled-y-up {
+  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SaraCount</title>
+
+        <!-- Styles -->
+        <link href="global.css" rel="stylesheet">
+        <style>
+            .panel {
+                height: 110px;
+            }
+
+            label {
+                font-weight: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <!-- Collapsed Hamburger -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!-- Branding Image -->
+                        <a class="navbar-brand" href="/count">
+                            SaraCount
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="nav navbar-nav">
+                            <li><a href="/count">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div id="event-container" class="row" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        <script src="timer.js"></script>
+        <script src="event.js"></script>
+        <script>
+            var events = [
+                new Event('Time with Sara', 1496167200)
+            ];
+
+            events.forEach(event => {
+                let container = document.getElementById('event-container');
+
+                container.innerHTML += event.getHTML();
+            });
+
+        	function updateAll() {
+        		var elements = document.getElementsByClassName("event");
+        		for(var i = 0; i < elements.length; i++) {
+        			updateTimer(events[i].getTimestamp(), elements[i]);
+        		}
+        	}
+        	 setInterval(updateAll, 1000);
+        </script>
+    </body>
+</html>
